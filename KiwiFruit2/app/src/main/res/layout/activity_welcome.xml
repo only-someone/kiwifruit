@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:theme="@style/AppTheme.NoActionBar"
-tools:context="com.example.kiwifruit.Activity.WelcomeActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context="com.example.kiwifruit.Activity.WelcomeActivity">
 
-<ImageView
-    android:id="@+id/iv_welcome"
-    android:layout_marginTop="100dp"
-    android:layout_width="300dp"
-    android:layout_height="300dp"
-    android:src="@mipmap/kiwifruit"
-    android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/iv_welcome"
+        android:layout_marginTop="80dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@mipmap/kiwifruit"
+        android:layout_centerHorizontal="true" />
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/iv_welcome"
-    android:layout_centerInParent="true"
+    <TextView
+        android:id="@+id/T1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_welcome"
+        android:layout_centerInParent="true"
 
-    android:text="巴东一家兴种植专业合作社"
+        android:text="巴东一家兴"
 
-    android:textSize="25dp"
-    android:textStyle="bold" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T1"
+        android:layout_centerInParent="true"
 
+        android:text="种植专业合作社"
+
+        android:textSize="25dp"
+        android:textStyle="bold" />
 </RelativeLayout>
