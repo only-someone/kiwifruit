@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="合作社简介"
+        android:id="@+id/introduce">
+    </item>
+
+    <item android:title="产品系列"
+        android:id="@+id/product">
+       <menu>
+           <item
+               android:id="@+id/manyproduct"
+               android:visible="true"
+               android:icon="@drawable/ic_menu_camera"
+               android:title="......" />
+           <item
+                android:id="@+id/kiwifruit"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="猕猴桃系列" />
+            <item
+                android:visible="false"
+                android:id="@+id/honey"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="蜂蜜系列" />
+            <item
+                android:visible="false"
+                android:id="@+id/tea"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="茶系列" />
+
+            <item
+                android:id="@+id/potato"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="硒土豆系列" />
+            <item
+                android:id="@+id/sweetpotato"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="红薯系列" />
+            <item
+                android:id="@+id/fusheng"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="苻生" />
+            <item
+                android:id="@+id/walnut"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="核桃" />
+            <item
+                android:id="@+id/penggan"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="碰柑" />
+            <item
+                android:id="@+id/Navelorange"
+                android:visible="false"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="脐橙" />
+        </menu>
+    </item>
+    <item android:title="基地介绍"
+        android:id="@+id/foundition">
+        <menu>
+            <item
+                android:visible="true"
+                android:id="@+id/manyfoundition"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="......" />
+            <item
+                android:visible="false"
+                android:id="@+id/kiwifoudition"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="猕猴桃基地" />
+            <item
+                android:visible="false"
+                android:id="@+id/potatofoundition"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="土豆基地" />
+            <item
+                android:visible="false"
+                android:id="@+id/honeybeefoudition"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="土蜜蜂基地" />
+            <item
+                android:visible="false"
+                android:id="@+id/orangefoundition"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="碰柑、脐橙基地" />
+        </menu>
+    </item>
+    <item android:title="联系我们"
+        android:id="@+id/contact">
+        <menu>
+            <item
+                android:visible="true"
+                android:id="@+id/wechat"
+                android:icon="@drawable/ic_menu_share"
+                android:title="微信" />
+            <item
+                android:visible="true"
+                android:id="@+id/phone"
+                android:icon="@drawable/ic_menu_send"
+                android:title="电话" />
+        </menu>
+    </item>
+
+</menu>
