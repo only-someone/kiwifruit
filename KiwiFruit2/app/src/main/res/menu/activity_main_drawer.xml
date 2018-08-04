@@ -6,7 +6,48 @@
     <item android:title="合作社简介"
         android:id="@+id/introduce">
     </item>
+    <item android:title="合作社展示"
+    android:id="@+id/detail">
+    <menu>
+        <item
+            android:id="@+id/manydetail"
+            android:visible="true"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="点击查看更多" />
+        <item
+            android:id="@+id/construct"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="合作社结构、成员简介" />
+        <item
+            android:visible="false"
+            android:id="@+id/people"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="合作社社员表" />
+        <item
+            android:visible="false"
+            android:id="@+id/certification"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="合作社社员证图片" />
 
+        <item
+            android:id="@+id/contract"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="合作社购销合同" />
+        <item
+            android:id="@+id/office"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="合作社办公图片" />
+        <item
+            android:id="@+id/plant"
+            android:visible="false"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="合作社种植图片" />
+
+    </menu>
+    </item>
     <item android:title="产品系列"
         android:id="@+id/product">
        <menu>
@@ -14,7 +55,7 @@
                android:id="@+id/manyproduct"
                android:visible="true"
                android:icon="@drawable/ic_menu_camera"
-               android:title="......" />
+               android:title="点击查看更多" />
            <item
                 android:id="@+id/kiwifruit"
                 android:visible="false"
@@ -70,7 +111,7 @@
                 android:visible="true"
                 android:id="@+id/manyfoundition"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="......" />
+                android:title="点击查看更多" />
             <item
                 android:visible="false"
                 android:id="@+id/kiwifoudition"
@@ -100,9 +141,9 @@
                 android:visible="true"
                 android:id="@+id/wechat"
                 android:icon="@drawable/ic_menu_share"
-                android:title="微信" />
+                android:title="联系方式" />
             <item
-                android:visible="true"
+                android:visible="false"
                 android:id="@+id/phone"
                 android:icon="@drawable/ic_menu_send"
                 android:title="电话" />

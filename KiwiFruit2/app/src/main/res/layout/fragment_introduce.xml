@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kiwifruit.fragment.introduceFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/introduce_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简    介"
+            android:textStyle="bold"
+            android:textSize="40dp"/>
+        <TextView
+            android:id="@+id/introduce"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/introduce_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="\t\t\t\t巴东县一家兴种植专业合作社成立于二零一七年二月，注册地址为巴东县水布垭镇景家坪村九组，注册资金四十五万元整。\n\t\t\t\t家兴合作社由返乡创业大学生谭学勇发起并引领创办，现有股东五人，主要组织社员开展猕猴桃、板栗、马铃薯种植、销售，为本社社员提供信息、咨询、技术服务。现有专业的技术服务团队，先进的办公设施和规范的办公场地及生产仓储用地约1500平米 。\n\t\t\t\t一家兴种植专业合作社自成立以来，在景家坪村八个村小组范围内选择适应地标准化、专业化、规模化种植猕猴桃13000余株，种植总面积约200亩，发展专业合作社社员约60人，种植户85户。猕猴桃种植以市场畅销的金桃（黄心）和红阳（红心）两种品种为主。一家兴种植专业合作社与建始县银河猕猴桃种植专业合作社合作，实行合作社+农户的种植模式。与农户签订购销合同，联营种植，生产、销售一体化。\n\t\t\t\t景家坪村位于清江以南，海拔1200米，年平均气温15.2度，日照光合约280天，平均降水量1210mm。属于亚热带季风气候，雨量充沛、气温适中。土壤肥沃，有机物含量高，富含钙、铁、锌、硒等微量元素，其中以硒元素含量为高。境内森林覆盖率70%，野生猕猴桃生长旺盛，果实味美可口，适合猕猴桃的大范围种植。\n\t\t\t\t一家兴种植专业合作社坚持以发展绿色生态种植为理念，坚持以生产基地规模化、种植专业化、服务团队化为基础，坚持以高标准、高收益、品牌化为目标。力争2020年发展种植面积达500亩，2025年发展种植面积至1000亩为发展方向。让猕猴桃种植产业辐射至周边村镇，成为当地农户脱贫致富的支柱性产业。
+"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/sign"
+            android:layout_below="@+id/introduce"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:text="巴东县一家兴种植专业合作社"
+            android:textStyle="italic"
+            android:layout_margin="10dp"
+
+            />
+    </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

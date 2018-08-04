@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.MainActivity"
-            android:label="一家兴"
+            android:label="巴东一家兴种植专业合作社"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 

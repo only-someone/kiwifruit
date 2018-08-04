@@ -10,14 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.kiwifruit.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link productfragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link productfragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class productfragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
