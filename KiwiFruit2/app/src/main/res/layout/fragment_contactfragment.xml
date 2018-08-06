@@ -21,11 +21,41 @@
             android:layout_height="wrap_content"
             android:text="电话："
             android:textStyle="bold"/>
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="17364278799\n18885035722\n15761629971\n07184852919"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:clickable="true"
+                android:id="@+id/tel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="17364278799"/>
+            <TextView
+                android:id="@+id/tel2"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="18885032722"/>
+
+            <TextView
+                android:id="@+id/tel3"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="15761629971"/>
+            <TextView
+                android:id="@+id/tel4"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="07184852919"/>
+        </LinearLayout>
+
     </LinearLayout>
         <LinearLayout
             android:layout_marginTop="20dp"

@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import com.example.kiwifruit.R;
-import android.os.Bundle;
-
-import java.sql.Time;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -29,9 +26,10 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                finish();
             }
         };
         mytimer.schedule(task,3000);
-
     }
 }
+
