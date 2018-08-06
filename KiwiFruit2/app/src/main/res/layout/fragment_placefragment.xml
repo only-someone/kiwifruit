@@ -3,13 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kiwifruit.fragment.placefragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/detailfragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </android.support.v7.widget.RecyclerView>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/place_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="猕猴桃基地"
+                android:visibility="invisible"
+                android:textColor="#000000"
+                android:textSize="30dp"/>
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/place_image"
+                android:layout_width="350dp"
+                android:src="@mipmap/honey1"
+                android:layout_height="300dp" />
+            <TextView
+                android:id="@+id/place_introduce"
+                android:layout_below="@+id/place_image"
+                android:layout_centerHorizontal="true"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="介绍"/>
+        </RelativeLayout>
+    </ScrollView>
 </FrameLayout>

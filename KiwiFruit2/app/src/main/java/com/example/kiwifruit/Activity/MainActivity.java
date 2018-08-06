@@ -141,17 +141,28 @@ public class MainActivity extends AppCompatActivity
                         new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
-
                                 Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
                                 toolbar.setTitle(title);
-                                Fragment fragment = new detailFragrament();
-                                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                                transaction.replace(R.id.content_frame, fragment);
-                                transaction.commit();
-                                Log.d("sd", "onMenuItemClick:product ");
-                                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                                drawer.closeDrawer(GravityCompat.START);
-                                return true;
+                                if((title.equals("合作社结构、成员简介"))|| (title.equals("合作社社员表"))){
+                                    Fragment fragment = new peoplefragment();
+                                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                                    transaction.replace(R.id.content_frame, fragment);
+                                    transaction.commit();
+                                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                                    drawer.closeDrawer(GravityCompat.START);
+                                    return true;
+                                }
+                                else {
+                                    Fragment fragment = new detailFragrament();
+                                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                                    transaction.replace(R.id.content_frame, fragment);
+                                    transaction.commit();
+                                    Log.d("sd", "onMenuItemClick:product ");
+                                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                                    drawer.closeDrawer(GravityCompat.START);
+                                    return true;
+                                }
+
                             }
                         }
                 );
