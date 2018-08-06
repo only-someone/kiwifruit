@@ -121,7 +121,7 @@ public class productfragment extends Fragment {
         productList.add(newproduct);
         newproduct=new product("红薯系列","介绍",R.mipmap.kiwifruit);
         productList.add(newproduct);
-        newproduct=new product("苻生","介绍",R.mipmap.fusheng1);
+        newproduct=new product("花生","介绍",R.mipmap.fusheng1);
         productList.add(newproduct);
         newproduct=new product("核桃","介绍",R.mipmap.kiwifruit);
         productList.add(newproduct);

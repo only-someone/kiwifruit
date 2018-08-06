@@ -86,7 +86,7 @@
                 android:id="@+id/fusheng"
                 android:visible="false"
                 android:icon="@drawable/ic_menu_camera"
-                android:title="苻生" />
+                android:title="花生" />
             <item
                 android:id="@+id/walnut"
                 android:visible="false"
