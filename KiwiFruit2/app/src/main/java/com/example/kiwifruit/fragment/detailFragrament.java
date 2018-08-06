@@ -1,5 +1,6 @@
 package com.example.kiwifruit.fragment;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,9 +10,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.kiwifruit.Model.detail;
 import com.example.kiwifruit.R;
 
@@ -24,6 +28,7 @@ public class detailFragrament extends Fragment {
     private ImageView detail_image;
     private TextView detail_introduce;
     private TextView detail_title;
+    Dialog dia;
     private List<detail> detaillist = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,8 +53,33 @@ public class detailFragrament extends Fragment {
         Log.d("no", thisdetail.getdetailintroduce());
 
         detail_title.setText(thisdetail.getdetailname());
-        detail_image.setImageResource(thisdetail.getdetail_image());
+        Glide.with(getContext()).load(thisdetail.getdetail_image()).into(detail_image);
         detail_introduce.setText(thisdetail.getdetailintroduce());
+        detail_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dia.show();
+            }
+        });
+
+        dia = new Dialog(getContext(), R.style.edit_AlertDialog_style);
+        dia.setContentView(R.layout.activity_start_dialog);
+        ImageView imageView = (ImageView) dia.findViewById(R.id.start_img);
+        imageView.setBackgroundResource(thisdetail.getdetail_image());
+        //选择true的话点击其他地方可以使dialog消失，为false的话不会消失
+        dia.setCanceledOnTouchOutside(true); // Sets whether this dialog is
+        Window w = dia.getWindow();
+        WindowManager.LayoutParams lp = w.getAttributes();
+        lp.x = 0;
+        lp.y = 40;
+        dia.onWindowAttributesChanged(lp);
+        imageView.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dia.dismiss();
+                    }
+                });
         return view;
     }
 

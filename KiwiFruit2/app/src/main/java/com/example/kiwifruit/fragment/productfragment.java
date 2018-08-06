@@ -15,9 +15,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.kiwifruit.Activity.MainActivity;
 import com.example.kiwifruit.R;
 import com.example.kiwifruit.Model.product;
@@ -31,6 +34,7 @@ public class productfragment extends Fragment {
     private ImageView product_image;
     private TextView product_introduce;
     private TextView product_title;
+    Dialog dia;
     private List<product> productList = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,7 +57,7 @@ public class productfragment extends Fragment {
         product thisproduct=findproduct(current_title);
         Log.d("s",thisproduct.getProductname() );
         product_title.setText(thisproduct.getProductname());
-        product_image.setImageResource(thisproduct.getProduct_image());
+        Glide.with(getContext()).load(thisproduct.getProduct_image()).into(product_image);
         //Log.d("s",thisproduct.getProduct_image());
         product_introduce.setText(thisproduct.getProductintroduce());
         Log.d("s",thisproduct.getProductintroduce());
@@ -64,7 +68,32 @@ public class productfragment extends Fragment {
                dialog.show();
             }
         });
+        product_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dia.show();
+            }
+        });
 
+        dia = new Dialog(getContext(), R.style.edit_AlertDialog_style);
+        dia.setContentView(R.layout.activity_start_dialog);
+        ImageView imageView = (ImageView) dia.findViewById(R.id.start_img);
+        imageView.setBackgroundResource(thisproduct.getProduct_image());
+
+        //选择true的话点击其他地方可以使dialog消失，为false的话不会消失
+        dia.setCanceledOnTouchOutside(true); // Sets whether this dialog is
+        Window w = dia.getWindow();
+        WindowManager.LayoutParams lp = w.getAttributes();
+        lp.x = 0;
+        lp.y = 40;
+        dia.onWindowAttributesChanged(lp);
+        imageView.setOnClickListener(
+                new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dia.dismiss();
+            }
+        });
         return view;
     }
 

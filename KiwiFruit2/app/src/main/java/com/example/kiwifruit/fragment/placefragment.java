@@ -1,6 +1,7 @@
 package com.example.kiwifruit.fragment;
 
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -8,9 +9,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.kiwifruit.Model.product;
 import com.example.kiwifruit.R;
 import com.example.kiwifruit.Model.place;
@@ -23,6 +27,7 @@ public class placefragment extends Fragment {
     private ImageView place_image;
     private TextView place_introduce;
     private TextView place_title;
+    Dialog dia;
     private List<place> placelist = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,9 +52,35 @@ public class placefragment extends Fragment {
         Log.d("no", thisplace.getPlaceintroduce());
 
         place_title.setText(thisplace.getPlacename());
-        place_image.setImageResource(thisplace.getPlace_image());
+
+        Glide.with(getContext()).load(thisplace.getPlace_image()).into(place_image);
         place_introduce.setText(thisplace.getPlaceintroduce());
+        place_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dia.show();
+            }
+        });
+
+        dia = new Dialog(getContext(), R.style.edit_AlertDialog_style);
+        dia.setContentView(R.layout.activity_start_dialog);
+        ImageView imageView = (ImageView) dia.findViewById(R.id.start_img);
+        imageView.setBackgroundResource(thisplace.getPlace_image());
+        dia.setCanceledOnTouchOutside(true); // Sets whether this dialog is
+        Window w = dia.getWindow();
+        WindowManager.LayoutParams lp = w.getAttributes();
+        lp.x = 0;
+        lp.y = 40;
+        dia.onWindowAttributesChanged(lp);
+        imageView.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dia.dismiss();
+                    }
+                });
         return view;
+
     }
 
     public place findplace(String string)
